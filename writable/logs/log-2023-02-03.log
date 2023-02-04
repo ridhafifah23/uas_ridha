@@ -1,0 +1,22 @@
+CRITICAL - 2023-02-03 08:01:52 --> Invalid file: "grafik_data_gender.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('grafik_data_gender.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('grafik_data_gender', [], true)
+ 3 APPPATH\Controllers\Grafik_data_gender.php(18): view('grafik_data_gender', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Grafik_data_gender->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Grafik_data_gender))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-02-03 08:34:26 --> mysqli_sql_exception: Duplicate entry '2' for key 'PRIMARY' in C:\xampp\htdocs\uas_danendra\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\uas_danendra\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ta...', 0)
+#1 C:\xampp\htdocs\uas_danendra\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 C:\xampp\htdocs\uas_danendra\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 C:\xampp\htdocs\uas_danendra\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 C:\xampp\htdocs\uas_danendra\app\Models\Mahasiswa_model.php(26): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\uas_danendra\app\Controllers\Mahasiswa.php(88): App\Models\Mahasiswa_model->pro_add(Array)
+#6 C:\xampp\htdocs\uas_danendra\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Mahasiswa->pro_add()
+#7 C:\xampp\htdocs\uas_danendra\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#8 C:\xampp\htdocs\uas_danendra\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\uas_danendra\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
